@@ -1,0 +1,64 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(1.5em + 0.2vw) !important;
+  font: inherit;
+}
+
+:where(img, picture, svg, video) {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  border: 2px solid white;
+  width: 40%;
+  padding: 2rem;
+}
+
+.form-item-container {
+  padding: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  font-size: 20px;
+  padding: 0.25rem;
+}
+
+button {
+  width: 100%;
+  background-color: white;
+  font-size: 20px;
+  color: black;
+}
+
+button:hover {
+  border: 2px solid red;
+  color: red;
+}

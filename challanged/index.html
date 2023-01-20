@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Meti uma class no form para o query selector -->
+      <form class="form" action="submit.html" method="get">
+        <div class="form-item-container">
+          <label>Nome</label>
+          <input type="text" placeholder="Nome" id="name" />
+        </div>
+
+        <div class="form-item-container">
+          <label>Data de Nascimento</label>
+          <input type="date" id="date" />
+        </div>
+
+        <div class="form-item-container">
+          <label>Qual é o teu trabalho?</label>
+          <input type="text" placeholder="Trabalho" id="work" />
+        </div>
+
+        <div class="form-item-container">
+          <label>Quais são os teus intresses? (Separdo por virgulas)</label>
+          <input type="text" placeholder="Intresseses" id="hobbies" />
+        </div>
+
+        <div class="form-item-container">
+          <fieldset>
+            <legend>Gostas de bolachas?</legend>
+
+            <div>
+              <input type="radio" name="bolachas" value="Sim" />
+              <label>Sim</label>
+            </div>
+
+            <div>
+              <input type="radio" name="bolachas" value="Não" />
+              <label>Não</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-item-container">
+          <button type="submit" id="btn">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
