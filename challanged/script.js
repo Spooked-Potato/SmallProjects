@@ -8,10 +8,8 @@ document.querySelector(".form").addEventListener("submit", function () {
   let bananas = document.getElementById("name").value;
   let data = document.getElementById("date").value;
   let work = document.getElementById("work").value;
-  let fun = document.getElementById("hobbies").value;
-  const selected = document.querySelector(
-    'input[name="bolachas"]:checked'
-  ).value;
+  let selected = document.querySelector('input[name="bolachas"]:checked').value;
+  let hobbies = document.getElementById("hobies").value.split(" ");
 
   pharse =
     "hi there " +
@@ -21,7 +19,7 @@ document.querySelector(".form").addEventListener("submit", function () {
     " you work at " +
     work +
     " and your hobbies are " +
-    fun +
+    hobbies +
     " you like cookies " +
     selected;
 
