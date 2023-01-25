@@ -3,15 +3,17 @@ document.getElementById("date").valueAsDate = new Date();
 const element = document.getElementById("btn");
 
 let pharse;
+
 let form = document.querySelector(".form");
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  let bananas = document.getElementById("name").value;
-  let data = document.getElementById("date").value;
-  let work = document.getElementById("work").value;
-  let selected = document.querySelector('input[name="bolachas"]:checked').value;
+  const bananas = urlParams.get("username").value;
+  const data = urlParams.get("datatime").value;
+  const work = urlParams.get("work").value;
 
-  let array1 = document.getElementById("hobies").value.split(",");
+  let selected = document.querySelector('input[name="bolachas"]:checked').value;
+  let array1 = urlParams.get("hobies").value.split(",");
 
   let hobbies = "";
 
@@ -31,6 +33,7 @@ form.addEventListener("submit", function (event) {
     " you like cookies " +
     selected;
 
-  sessionStorage.setItem("pharse", pharse);
+  document.getElementById("result").textContent = pharse;
+
   form.submit();
 });
