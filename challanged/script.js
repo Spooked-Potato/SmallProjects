@@ -7,13 +7,17 @@ let pharse;
 let form = document.querySelector(".form");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const bananas = urlParams.get("username").value;
-  const data = urlParams.get("datatime").value;
-  const work = urlParams.get("work").value;
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
 
-  let selected = document.querySelector('input[name="bolachas"]:checked').value;
-  let array1 = urlParams.get("hobies").value.split(",");
+  const bananas = urlParams.get("username");
+  console.log("username");
+
+  const data = urlParams.get("datatime");
+  const work = urlParams.get("work");
+
+  let selected = document.querySelector('input[name="bolachas"]:checked');
+  let array1 = urlParams.get("hobies").split(",");
 
   let hobbies = "";
 
@@ -28,12 +32,13 @@ form.addEventListener("submit", function (event) {
     data +
     " you work at " +
     work +
-    " and your hobbies are " +
-    hobbies +
-    " you like cookies " +
-    selected;
+    " and your hobbies are ";
+  hobbies + " you like cookies " + selected;
 
   document.getElementById("result").textContent = pharse;
 
+  console.log(pharse);
+
   form.submit();
+  event.preventDefault();
 });
