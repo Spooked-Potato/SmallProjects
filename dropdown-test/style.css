@@ -1,0 +1,23 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(1.5em + 0.2vw) !important;
+  font: inherit;
+}
+
+:where(img, picture, svg, video) {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+}
