@@ -17,7 +17,7 @@ function dropdownChange() {
   //   }
   // });
 
-  if (checkDropDown == "puta") {
+  if (checkDropDown == "idk") {
     console.log("this is working");
     buttonChange.innerText = "Get Quote";
   } else {
