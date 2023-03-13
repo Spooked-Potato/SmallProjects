@@ -1,21 +1,12 @@
-const BLUE_CIRCLE = "1";
-const BLUE_TRIANGLE = "2";
-const RED_CIRCLE = "3";
-const RED_TRIANGLE = "4";
+// const BLUE_CIRCLE = "1";
+// const BLUE_TRIANGLE = "2";
+// const RED_CIRCLE = "3";
+// const RED_TRIANGLE = "4";
 
 function dropdownChange() {
   const checkDropDown = document.querySelector("#numberPeople").value;
   let buttonChange = document.getElementById("getQuote");
   buttonChange.innerText = "Book Now";
-
-  // checkDropDown.addEventListener("change", function () {
-  //   if (checkDropDown.changed == true) {
-  //     console.log("hi this working on change");
-  //   }
-  //   if (checkDropDown.changed == true) {
-  //     console.log("this not working");
-  //   }
-  // });
 
   if (checkDropDown == "idk") {
     console.log("this is working");
@@ -30,7 +21,7 @@ function dropdownChange() {
       switch (combinedOptions) {
         case "blue circle":
           console.log("bananas");
-          result = BLUE_CIRCLE;
+          result = "hi";
           break;
         case "blue triangle":
           result = BLUE_TRIANGLE;
